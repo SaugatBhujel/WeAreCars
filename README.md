@@ -1,153 +1,195 @@
 # WeAreCars Rental Management System
 
-A Windows Forms application for managing car rentals at WeAreCars. This system allows staff members to process car rentals, manage bookings, and track rental history.
+![.NET](https://img.shields.io/badge/.NET-6.0-512BD4?style=for-the-badge&logo=dotnet)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Educational-yellow?style=for-the-badge)
 
-## Features
+A professional Windows Forms application for managing car rentals at WeAreCars. This enterprise-grade system provides a comprehensive solution for processing car rentals, managing bookings, and tracking rental history with a modern, user-friendly interface.
 
-- Staff login system with secure authentication
-- Car rental booking management system
-- Multiple car types and fuel options
-- Optional extras (unlimited mileage, breakdown cover)
-- Rental history tracking with booking references
-- Input validation and error handling
-- Professional user interface with intuitive layout
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/your-username/your-repo/raw/main/screenshots/splash.png" alt="WeAreCars Splash Screen" width="600"/>
+</div>
 
-## Prerequisites
+## 🌟 Key Features
 
-Before you begin, ensure you have the following installed:
-1. **Git** 
-   - Download from: https://git-scm.com/downloads
-   - To verify installation, open PowerShell and type: `git --version`
+- 🔐 Secure staff authentication system
+- 📊 Intuitive dashboard interface
+- 🚗 Comprehensive vehicle management
+- 💰 Dynamic pricing calculator
+- 📝 Detailed booking management
+- 📈 Real-time rental tracking
+- 🎨 Modern UI with animations
+- ✅ Robust input validation
 
-2. **.NET 6.0 SDK**
-   - Download from: https://dotnet.microsoft.com/download/dotnet/6.0
-   - Choose the x64 version for Windows
-   - To verify installation, open PowerShell and type: `dotnet --version`
+## 🚀 Getting Started
 
-## Step-by-Step Installation Guide
+### Prerequisites
 
-1. **Create a Project Folder**
-   - Open File Explorer
-   - Go to a location where you want to store the project (e.g., Desktop or Documents)
-   - Create a new folder (e.g., "WeAreCars")
+Before installation, ensure you have the following:
 
-2. **Open Terminal/PowerShell**
-   - Press `Windows + R`
-   - Type `powershell` and press Enter
-   - OR right-click Start button and select "Windows PowerShell"
+#### Required Software
+- **Git** (2.x or later)
+  - 📥 [Download Git](https://git-scm.com/downloads)
+  - ✔️ Verify: `git --version`
 
-3. **Navigate to Your Project Folder**
+- **.NET 6.0 SDK**
+  - 📥 [Download .NET 6.0](https://dotnet.microsoft.com/download/dotnet/6.0)
+  - ✔️ Verify: `dotnet --version`
+
+#### System Requirements
+- 💻 Windows 10 or later
+- 🎮 4GB RAM (8GB recommended)
+- 💾 100MB free storage
+- 🖥️ 1280x720 or higher resolution
+
+### 📥 Installation
+
+1. **Create Project Directory**
    ```powershell
-   # If folder is on Desktop:
-   cd C:\Users\YOUR_USERNAME\Desktop\WeAreCars
-   # Replace YOUR_USERNAME with your Windows username
+   # Create and navigate to project folder
+   mkdir WeAreCars
+   cd WeAreCars
    ```
 
-4. **Clone the Repository**
+2. **Clone Repository**
    ```powershell
    git clone https://github.com/SaugatBhujel/WeAreCars.git
    cd WeAreCars
    ```
 
-5. **Build and Run the Application**
+3. **Build and Run**
    ```powershell
    dotnet build
    dotnet run
    ```
 
-## Login Credentials
+## 🔑 Authentication
 
-To access the system, use these credentials:
-- **Username:** sta001
-- **Password:** givemethekeys123
+Access the system using these credentials:
+```
+Username: sta001
+Password: givemethekeys123
+```
 
-## Using the Application
+## 💻 Usage Guide
 
-1. **Launch and Login**
-   - Start the application
-   - Enter the staff credentials
-   - Wait for the main interface to load
+### 1. Login Process
+- Launch the application
+- Enter staff credentials
+- Access the main dashboard
 
-2. **Creating a New Booking**
-   - Click on the "New Booking" tab
-   - Fill in all required customer details (marked with *)
-   - Select rental options:
-     - Number of days (1-28 days)
-     - Car type
-     - Fuel type
-     - Optional extras
+### 2. Creating Bookings
+- Navigate to "New Booking"
+- Fill required customer details
+- Select vehicle preferences
+- Add optional extras
+- Review and confirm
 
-3. **Calculate and Confirm Booking**
-   - Click "Calculate Total" to see the price
-   - Review the booking details
-   - Click "Confirm Booking" to complete the rental
-   - Note down the booking reference number
+### 3. Managing Rentals
+- View all active rentals
+- Track booking status
+- Access rental history
 
-4. **View Rentals**
-   - Click on the "Current Rentals" tab
-   - View all active rentals and their details
+## 💰 Pricing Structure
 
-## Pricing Structure
+### Base Rates
+- **Daily Rate:** £25
 
-### Base Rate
-- £25 per day
+### Vehicle Surcharges
+| Type | Additional Cost |
+|------|----------------|
+| City Car | No charge |
+| Family Car | +£50 |
+| Sports Car | +£75 |
+| SUV | +£65 |
 
-### Car Type Surcharges
-- City car: No extra charge
-- Family car: +£50
-- Sports car: +£75
-- SUV: +£65
-
-### Fuel Type Surcharges
-- Petrol: No extra charge
-- Diesel: No extra charge
-- Hybrid: +£30
-- Full electric: +£50
+### Fuel Options
+| Type | Additional Cost |
+|------|----------------|
+| Petrol/Diesel | No charge |
+| Hybrid | +£30 |
+| Electric | +£50 |
 
 ### Optional Extras
-- Unlimited mileage: +£10 per day
-- Breakdown cover: +£2 per day
+- **Unlimited Mileage:** +£10/day
+- **Breakdown Cover:** +£2/day
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
-1. **Git Not Recognized**
-   - Reinstall Git
-   - Add Git to system PATH
-   - Restart PowerShell
+### Common Issues
+
+1. **Git Not Found**
+   ```powershell
+   # Solution: Reinstall Git and add to PATH
+   [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Program Files\Git\cmd", "Machine")
+   ```
 
 2. **Dotnet Command Not Found**
-   - Reinstall .NET 6.0 SDK
-   - Add .NET to system PATH
-   - Restart PowerShell
+   ```powershell
+   # Solution: Reinstall .NET SDK and add to PATH
+   [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Program Files\dotnet", "Machine")
+   ```
 
 3. **Build Errors**
-   - Ensure you have the correct .NET SDK version
-   - Try cleaning the solution: `dotnet clean`
-   - Rebuild: `dotnet build`
+   ```powershell
+   dotnet clean
+   dotnet restore
+   dotnet build
+   ```
 
-## System Requirements
+## 🔄 Updates and Maintenance
 
-- Operating System: Windows 10 or later
-- RAM: 4GB minimum (8GB recommended)
-- Storage: 100MB free space
-- Display: 1280x720 or higher resolution
-
-## Support
-
-If you encounter any issues:
-1. Check the troubleshooting section
-2. Verify all prerequisites are installed
-3. Ensure you're using the correct credentials
-4. Try restarting the application
-
-## Updates and Maintenance
-
-To get the latest updates:
+Keep your system up to date:
 ```powershell
 git pull origin main
 dotnet build
 ```
 
-## License
+## 🤝 Support
 
-This project is part of an academic assessment and is intended for educational purposes only. 
+Need assistance? Follow these steps:
+1. Check the troubleshooting guide
+2. Verify system requirements
+3. Ensure correct credentials
+4. Try restarting the application
+
+## 📝 License
+
+This project is part of an academic assessment and is intended for educational purposes only. All rights reserved.
+
+## 🔍 Technical Details
+
+- **Framework:** .NET 6.0
+- **Language:** C# 10.0
+- **UI Framework:** Windows Forms
+- **Architecture:** Object-Oriented
+- **Design Pattern:** Model-View-Controller
+
+## 🏗️ Project Structure
+
+```
+WeAreCars/
+├── Program.cs          # Application entry point
+├── SplashScreen.cs     # Welcome screen
+├── LoginForm.cs        # Authentication interface
+├── MainForm.cs         # Main application window
+├── Booking.cs          # Booking logic and data model
+└── README.md          # Documentation
+```
+
+## 🌟 Best Practices
+
+- ✨ Modern UI/UX design
+- 🔒 Secure authentication
+- ♻️ Clean code principles
+- 📊 Efficient data management
+- 🎯 Input validation
+- 🎨 Consistent styling
+
+---
+
+<div align="center">
+  Made with ❤️ by Saugat Bhujel
+</div> 
