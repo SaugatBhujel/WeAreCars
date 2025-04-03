@@ -72,66 +72,86 @@ namespace WeAreCars
             {
                 Text = "Customer Details",
                 Location = new Point(10, currentY),
-                Size = new Size(740, 200)
+                Size = new Size(740, 200),
+                Font = new Font("Segoe UI Semibold", 10),
+                ForeColor = Color.FromArgb(37, 99, 235),
+                BackColor = Color.FromArgb(248, 250, 252)
             };
 
             // First Name
             Label firstNameLabel = new Label
             {
                 Text = "First Name *",
-                Location = new Point(labelX, 30)
+                Location = new Point(labelX, 30),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
             };
             firstNameTextBox = new TextBox
             {
                 Location = new Point(controlX, 30),
-                Width = controlWidth
+                Width = controlWidth,
+                Font = new Font("Segoe UI", 10),
+                BorderStyle = BorderStyle.FixedSingle
             };
 
             // Surname
             Label surnameLabel = new Label
             {
                 Text = "Surname *",
-                Location = new Point(labelX, 60)
+                Location = new Point(labelX, 60),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
             };
             surnameTextBox = new TextBox
             {
                 Location = new Point(controlX, 60),
-                Width = controlWidth
+                Width = controlWidth,
+                Font = new Font("Segoe UI", 10),
+                BorderStyle = BorderStyle.FixedSingle
             };
 
             // Address
             Label addressLabel = new Label
             {
                 Text = "Address *",
-                Location = new Point(labelX, 90)
+                Location = new Point(labelX, 90),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
             };
             addressTextBox = new TextBox
             {
                 Location = new Point(controlX, 90),
                 Width = controlWidth,
                 Multiline = true,
-                Height = 40
+                Height = 40,
+                Font = new Font("Segoe UI", 10),
+                BorderStyle = BorderStyle.FixedSingle
             };
 
             // Age
             Label ageLabel = new Label
             {
                 Text = "Age *",
-                Location = new Point(labelX, 140)
+                Location = new Point(labelX, 140),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
             };
             ageNumericUpDown = new NumericUpDown
             {
                 Location = new Point(controlX, 140),
                 Width = 70,
                 Minimum = 18,
-                Maximum = 99
+                Maximum = 99,
+                Font = new Font("Segoe UI", 10)
             };
 
             // Valid License
             validLicenseCheckBox = new CheckBox
             {
                 Text = "Valid Driving License *",
-                Location = new Point(controlX, 170)
+                Location = new Point(controlX, 170),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
             };
 
             customerGroup.Controls.AddRange(new Control[] {
@@ -147,34 +167,52 @@ namespace WeAreCars
             {
                 Text = "Rental Details",
                 Location = new Point(10, 230),
-                Size = new Size(740, 200)
+                Size = new Size(740, 200),
+                Font = new Font("Segoe UI Semibold", 10),
+                ForeColor = Color.FromArgb(37, 99, 235),
+                BackColor = Color.FromArgb(248, 250, 252)
+            };
+
+            // Car icon
+            Label carIcon = new Label
+            {
+                Text = "🚗",
+                Font = new Font("Segoe UI", 16),
+                Location = new Point(labelX, 25),
+                AutoSize = true
             };
 
             // Number of Days
             Label daysLabel = new Label
             {
                 Text = "Number of Days *",
-                Location = new Point(labelX, 30)
+                Location = new Point(labelX, 60),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
             };
             daysNumericUpDown = new NumericUpDown
             {
-                Location = new Point(controlX, 30),
+                Location = new Point(controlX, 60),
                 Width = 70,
                 Minimum = 1,
-                Maximum = 28
+                Maximum = 28,
+                Font = new Font("Segoe UI", 10)
             };
 
             // Car Type
             Label carTypeLabel = new Label
             {
                 Text = "Car Type *",
-                Location = new Point(labelX, 60)
+                Location = new Point(labelX, 90),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
             };
             carTypeComboBox = new ComboBox
             {
-                Location = new Point(controlX, 60),
+                Location = new Point(controlX, 90),
                 Width = controlWidth,
-                DropDownStyle = ComboBoxStyle.DropDownList
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Font = new Font("Segoe UI", 10)
             };
             carTypeComboBox.Items.AddRange(Enum.GetNames(typeof(CarType)));
 
@@ -182,61 +220,116 @@ namespace WeAreCars
             Label fuelTypeLabel = new Label
             {
                 Text = "Fuel Type *",
-                Location = new Point(labelX, 90)
+                Location = new Point(labelX, 120),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
             };
             fuelTypeComboBox = new ComboBox
             {
-                Location = new Point(controlX, 90),
+                Location = new Point(controlX, 120),
                 Width = controlWidth,
-                DropDownStyle = ComboBoxStyle.DropDownList
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Font = new Font("Segoe UI", 10)
             };
             fuelTypeComboBox.Items.AddRange(Enum.GetNames(typeof(FuelType)));
 
-            // Optional Extras
+            // Optional Extras with modern styling
+            Label optionalsLabel = new Label
+            {
+                Text = "Optional Extras",
+                Location = new Point(400, 30),
+                Font = new Font("Segoe UI Semibold", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
+            };
+
             unlimitedMileageCheckBox = new CheckBox
             {
-                Text = "Unlimited Mileage (+£10 per day)",
-                Location = new Point(controlX, 120)
+                Text = "Unlimited Mileage",
+                Location = new Point(400, 60),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
+            };
+
+            Label mileagePriceLabel = new Label
+            {
+                Text = "(+£10 per day)",
+                Location = new Point(520, 60),
+                Font = new Font("Segoe UI", 8),
+                ForeColor = Color.FromArgb(37, 99, 235)
             };
 
             breakdownCoverCheckBox = new CheckBox
             {
-                Text = "Breakdown Cover (+£2 per day)",
-                Location = new Point(controlX, 150)
+                Text = "Breakdown Cover",
+                Location = new Point(400, 90),
+                Font = new Font("Segoe UI", 9),
+                ForeColor = Color.FromArgb(71, 85, 105)
+            };
+
+            Label coverPriceLabel = new Label
+            {
+                Text = "(+£2 per day)",
+                Location = new Point(520, 90),
+                Font = new Font("Segoe UI", 8),
+                ForeColor = Color.FromArgb(37, 99, 235)
             };
 
             rentalGroup.Controls.AddRange(new Control[] {
+                carIcon,
                 daysLabel, daysNumericUpDown,
                 carTypeLabel, carTypeComboBox,
                 fuelTypeLabel, fuelTypeComboBox,
-                unlimitedMileageCheckBox,
-                breakdownCoverCheckBox
+                optionalsLabel,
+                unlimitedMileageCheckBox, mileagePriceLabel,
+                breakdownCoverCheckBox, coverPriceLabel
             });
 
-            // Total and Buttons
+            // Calculate button with modern styling
             calculateButton = new Button
             {
                 Text = "Calculate Total",
                 Location = new Point(20, 450),
-                Width = 120
+                Width = 150,
+                Height = 45,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(37, 99, 235),
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI Semibold", 11),
+                Cursor = Cursors.Hand
             };
+            calculateButton.FlatAppearance.BorderSize = 0;
             calculateButton.Click += CalculateButton_Click;
 
             totalLabel = new Label
             {
-                Location = new Point(150, 455),
+                Location = new Point(190, 460),
                 AutoSize = true,
-                Font = new Font(this.Font, FontStyle.Bold)
+                Font = new Font("Segoe UI Semibold", 12),
+                ForeColor = Color.FromArgb(37, 99, 235)
             };
 
+            // Confirm button with modern styling
             confirmButton = new Button
             {
                 Text = "Confirm Booking",
                 Location = new Point(600, 450),
-                Width = 120,
-                Enabled = false
+                Width = 150,
+                Height = 45,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(22, 163, 74),
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI Semibold", 11),
+                Enabled = false,
+                Cursor = Cursors.Hand
             };
+            confirmButton.FlatAppearance.BorderSize = 0;
             confirmButton.Click += ConfirmButton_Click;
+
+            // Add hover effects
+            calculateButton.MouseEnter += (s, e) => calculateButton.BackColor = Color.FromArgb(29, 78, 216);
+            calculateButton.MouseLeave += (s, e) => calculateButton.BackColor = Color.FromArgb(37, 99, 235);
+            confirmButton.MouseEnter += (s, e) => confirmButton.BackColor = Color.FromArgb(21, 128, 61);
+            confirmButton.MouseLeave += (s, e) => confirmButton.BackColor = Color.FromArgb(22, 163, 74);
 
             bookingPage.Controls.AddRange(new Control[] {
                 customerGroup,

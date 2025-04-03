@@ -43,109 +43,85 @@ namespace WeAreCars
 
         private void InitializeComponent()
         {
-            this.Text = "WeAreCars - Staff Login";
-            this.Size = new Size(450, 600);
+            this.Text = "WeAreCars Login";
+            this.Size = new Size(350, 400);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.None;
             this.BackColor = Color.FromArgb(30, 41, 59);
 
-            // Create main panel with shadow effect
+            // Main panel
             Panel mainPanel = new Panel
             {
-                Size = new Size(400, 500),
-                Location = new Point(25, 50),
+                Size = new Size(310, 360),
+                Location = new Point(20, 20),
                 BackColor = Color.FromArgb(15, 23, 42)
             };
 
-            // Company logo/name
+            // Simple logo
             Label logoLabel = new Label
             {
                 Text = "WeAreCars",
-                Font = new Font("Segoe UI", 28, FontStyle.Bold),
+                Font = new Font("Segoe UI", 22, FontStyle.Bold),
                 ForeColor = Color.White,
                 AutoSize = true,
                 BackColor = Color.Transparent
             };
-            logoLabel.Location = new Point((mainPanel.Width - logoLabel.PreferredWidth) / 2, 40);
+            logoLabel.Location = new Point((mainPanel.Width - logoLabel.PreferredWidth) / 2, 30);
 
-            Label subtitleLabel = new Label
-            {
-                Text = "Staff Portal",
-                Font = new Font("Segoe UI Light", 14),
-                ForeColor = Color.FromArgb(226, 232, 240),
-                AutoSize = true,
-                BackColor = Color.Transparent
-            };
-            subtitleLabel.Location = new Point((mainPanel.Width - subtitleLabel.PreferredWidth) / 2, 90);
-
-            // Username input
-            Label usernameLabel = new Label
-            {
-                Text = "USERNAME",
-                Font = new Font("Segoe UI", 9, FontStyle.Bold),
-                ForeColor = Color.FromArgb(148, 163, 184),
-                Location = new Point(50, 160),
-                BackColor = Color.Transparent
-            };
-
+            // Username
             usernameTextBox = new TextBox
             {
-                Location = new Point(50, 185),
-                Size = new Size(300, 30),
-                Font = new Font("Segoe UI", 12),
+                Location = new Point(40, 100),
+                Size = new Size(230, 30),
+                Font = new Font("Segoe UI", 11),
                 BackColor = Color.FromArgb(30, 41, 59),
-                ForeColor = Color.White,
-                BorderStyle = BorderStyle.None
+                ForeColor = Color.FromArgb(148, 163, 184),
+                BorderStyle = BorderStyle.None,
+                PlaceholderText = "Username"
             };
 
             Panel usernameLine = new Panel
             {
-                Location = new Point(50, 210),
-                Size = new Size(300, 1),
+                Location = new Point(40, 125),
+                Size = new Size(230, 1),
                 BackColor = Color.FromArgb(71, 85, 105)
             };
 
-            // Password input
-            Label passwordLabel = new Label
-            {
-                Text = "PASSWORD",
-                Font = new Font("Segoe UI", 9, FontStyle.Bold),
-                ForeColor = Color.FromArgb(148, 163, 184),
-                Location = new Point(50, 240),
-                BackColor = Color.Transparent
-            };
-
+            // Password
             passwordTextBox = new TextBox
             {
-                Location = new Point(50, 265),
-                Size = new Size(300, 30),
-                Font = new Font("Segoe UI", 12),
+                Location = new Point(40, 160),
+                Size = new Size(230, 30),
+                Font = new Font("Segoe UI", 11),
                 BackColor = Color.FromArgb(30, 41, 59),
-                ForeColor = Color.White,
+                ForeColor = Color.FromArgb(148, 163, 184),
                 BorderStyle = BorderStyle.None,
-                PasswordChar = '•'
+                PasswordChar = '•',
+                PlaceholderText = "Password"
             };
 
             Panel passwordLine = new Panel
             {
-                Location = new Point(50, 290),
-                Size = new Size(300, 1),
+                Location = new Point(40, 185),
+                Size = new Size(230, 1),
                 BackColor = Color.FromArgb(71, 85, 105)
             };
 
             // Login button
             loginButton = new Button
             {
-                Text = "LOGIN",
-                Location = new Point(50, 350),
-                Size = new Size(300, 45),
+                Text = "Login",
+                Location = new Point(40, 230),
+                Size = new Size(230, 38),
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.FromArgb(37, 99, 235),
                 ForeColor = Color.White,
-                Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                Font = new Font("Segoe UI", 11),
                 Cursor = Cursors.Hand
             };
             loginButton.FlatAppearance.BorderSize = 0;
+            loginButton.MouseEnter += (s, e) => loginButton.BackColor = Color.FromArgb(29, 78, 216);
+            loginButton.MouseLeave += (s, e) => loginButton.BackColor = Color.FromArgb(37, 99, 235);
             loginButton.Click += LoginButton_Click;
 
             // Error message
@@ -153,7 +129,7 @@ namespace WeAreCars
             {
                 ForeColor = Color.FromArgb(239, 68, 68),
                 AutoSize = true,
-                Location = new Point(50, 410),
+                Location = new Point(40, 280),
                 Font = new Font("Segoe UI", 9),
                 BackColor = Color.Transparent
             };
@@ -165,26 +141,26 @@ namespace WeAreCars
                 Font = new Font("Arial", 16, FontStyle.Bold),
                 ForeColor = Color.FromArgb(148, 163, 184),
                 Cursor = Cursors.Hand,
-                Location = new Point(this.Width - 40, 10),
+                Location = new Point(mainPanel.Width - 25, 10),
                 AutoSize = true
             };
+            closeButton.MouseEnter += (s, e) => closeButton.ForeColor = Color.FromArgb(239, 68, 68);
+            closeButton.MouseLeave += (s, e) => closeButton.ForeColor = Color.FromArgb(148, 163, 184);
             closeButton.Click += (s, e) => Application.Exit();
 
             // Add controls to main panel
             mainPanel.Controls.AddRange(new Control[] {
                 logoLabel,
-                subtitleLabel,
-                usernameLabel,
                 usernameTextBox,
                 usernameLine,
-                passwordLabel,
                 passwordTextBox,
                 passwordLine,
                 loginButton,
-                errorLabel
+                errorLabel,
+                closeButton
             });
 
-            // Add shadow effect to main panel
+            // Add shadow effect
             mainPanel.Paint += (sender, e) =>
             {
                 const int BORDER_SIZE = 1;
@@ -196,7 +172,7 @@ namespace WeAreCars
                     borderColor, BORDER_SIZE, ButtonBorderStyle.Solid);
             };
 
-            this.Controls.AddRange(new Control[] { mainPanel, closeButton });
+            this.Controls.Add(mainPanel);
 
             // Enable form dragging
             bool isDragging = false;
