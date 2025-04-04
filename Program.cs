@@ -10,7 +10,13 @@ namespace WeAreCars
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashScreen());
+            
+            var splashScreen = new SplashScreen();
+            // Set the correct path to the GIF file
+            string gifPath = "Resources/car-logo.gif";
+            splashScreen.SetLogoGif(gifPath);
+            
+            Application.Run(splashScreen);
         }
     }
 } 
